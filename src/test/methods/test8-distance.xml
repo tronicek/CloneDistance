@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="3" distance="2">
+        <source file="java/org/mockito/internal/creation/MockSettingsImpl.java" startline="116" endline="118">
+public boolean isStubOnly() {
+        return this.stubOnly;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="781" endline="783">
+public boolean isEquals() {
+        return isEquals;
+    }
+</source>
+    </clone>
+</clones>

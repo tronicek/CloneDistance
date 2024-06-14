@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="8" similarity="97">
+        <source file="java/org/mockito/internal/verification/AtMost.java" startline="50" endline="57">
+private void removeAlreadyVerified(List&lt;Invocation&gt; invocations) {
+        for (Iterator&lt;Invocation&gt; iterator = invocations.iterator(); iterator.hasNext(); ) {
+            Invocation i = iterator.next();
+            if (i.isVerified()) {
+                iterator.remove();
+            }
+        }
+    }
+</source>
+        <source file="java/org/mockito/internal/verification/checkers/NumberOfInvocationsChecker.java" startline="46" endline="53">
+protected void removeAlreadyVerified(List&lt;Invocation&gt; invocations) {
+        for (Iterator&lt;Invocation&gt; iterator = invocations.iterator(); iterator.hasNext(); ) {
+            Invocation i = iterator.next();
+            if (i.isVerified()) iterator.remove();
+        }
+    }
+</source>
+    </clone>
+</clones>

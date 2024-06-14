@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="8" similarity="99">
+        <source file="java/org/mockito/internal/verification/AtMost.java" startline="50" endline="57">
+private void removeAlreadyVerified(List&lt;Invocation&gt; invocations) {
+        for (Iterator&lt;Invocation&gt; iterator = invocations.iterator(); iterator.hasNext(); ) {
+            Invocation i = iterator.next();
+            if (i.isVerified()) {
+                iterator.remove();
+            }
+        }
+    }
+</source>
+        <source file="java/org/mockito/internal/verification/checkers/NumberOfInvocationsChecker.java" startline="46" endline="53">
+protected void removeAlreadyVerified(List&lt;Invocation&gt; invocations) {
+        for (Iterator&lt;Invocation&gt; iterator = invocations.iterator(); iterator.hasNext(); ) {
+            Invocation i = iterator.next();
+            if (i.isVerified()) {
+                iterator.remove();
+            }
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="5" similarity="98">
+        <source file="java/org/mockito/internal/runners/util/FailureDetector.java" startline="17" endline="21">
+@Override
+    public void testFailure(Failure failure) throws Exception {
+        super.testFailure(failure);
+        failed = true;
+    }
+</source>
+        <source file="java/org/mockito/internal/runners/util/FrameworkUsageValidator.java" startline="25" endline="29">
+@Override
+    public void testFailure(Failure failure) {
+        super.testFailure(failure);
+        failed = true;
+    }
+</source>
+    </clone>
+</clones>

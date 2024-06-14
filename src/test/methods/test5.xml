@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="3" similarity="99">
+        <source file="A.java" startline="116" endline="118">
+    int add(int x, int y) {
+        return x + y;
+    }
+</source>
+        <source file="B.java" startline="781" endline="783">
+    int sub(int a, int b) {
+        return (a - b);
+    }
+</source>
+    </clone>
+</clones>

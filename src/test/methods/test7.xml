@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="6" similarity="99">
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="457" endline="462">
+public EqualsBuilder append(double lhs, double rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        return append(Double.doubleToLongBits(lhs), Double.doubleToLongBits(rhs));
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="477" endline="482">
+public EqualsBuilder append(float lhs, float rhs) {
+        if (isEquals) {
+            return this;
+        }
+        return append(Float.floatToIntBits(lhs), Float.floatToIntBits(rhs));
+    }
+</source>
+    </clone>
+    <clone nlines="4" similarity="98">
+        <source file="java/org/mockito/internal/verification/Calls.java" startline="45" endline="48">
+@Override
+    public String toString() {
+        return "Wanted invocations count (non-greedy): " + wantedCount;
+    }
+</source>
+        <source file="java/org/mockito/internal/verification/Times.java" startline="54" endline="57">
+@Override
+    public String toString() {
+        return "Wanted invocations count: " + wantedCount + "!";
+    }
+</source>
+    </clone>
+    <clone nlines="5" similarity="98">
+        <source file="java/org/mockito/internal/progress/ArgumentMatcherStorageImpl.java" startline="43" endline="47">
+public void reportAnd() {
+        assertStateFor("And(?)", TWO_SUB_MATCHERS);
+        And and = new And(popLastArgumentMatchers(TWO_SUB_MATCHERS));
+        matcherStack.push(new LocalizedMatcher(and));
+    }
+</source>
+        <source file="java/org/mockito/internal/progress/ArgumentMatcherStorageImpl.java" startline="52" endline="56">
+public void reportOr() {
+        assertStateFor("Or(?)");
+        Or or = new Or(popLastArgumentMatchers(TWO_SUB_MATCHERS));
+        matcherStack.push(new LocalizedMatcher(or));
+    }
+</source>
+    </clone>
+</clones>

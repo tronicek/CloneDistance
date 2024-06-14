@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="11" similarity="96">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java" startline="218" endline="229">
+public Duration newDurationYearMonth(
+                final boolean isPositive,
+                final BigInteger year,
+                final BigInteger month) {
+
+                return new DurationYearMonthImpl(
+                         isPositive,
+                         year,
+                         month
+                 );
+
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java" startline="248" endline="258">
+@Override
+        public Duration newDurationYearMonth(
+                final boolean isPositive,
+                final int year,
+                final int month) {
+
+                return new DurationYearMonthImpl(
+                        isPositive,
+                        year + 1,
+                        month);
+                }
+</source>
+    </clone>
+</clones>

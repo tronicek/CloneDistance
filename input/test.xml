@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="22" similarity="95">
+        <source file="3/selected/1354438.java" startline="614" endline="635">
+    public synchronized void requestDoCall(PhoneNumber number, String port) {
+        Debug.netMsg("Requesting the server to dial " + number.getIntNumber() + " using " + port);
+        actionRequest.action = ClientActionRequest.ActionType.doCall;
+        actionRequest.number = number;
+        actionRequest.port = port;
+        try {
+            SealedObject sealedActionRequest = new SealedObject(actionRequest, outCipher);
+            objectOut.writeObject(sealedActionRequest);
+            objectOut.flush();
+            objectOut.reset();
+        } catch (IOException e) {
+            Debug.error("Error writing writing doCall request");
+            Debug.error(e.toString());
+            e.printStackTrace();
+        } catch (IllegalBlockSizeException e) {
+            Debug.error("Illegal block size exception!");
+            Debug.error(e.toString());
+            e.printStackTrace();
+        }
+        actionRequest.number = null;
+        actionRequest.port = null;
+    }
+</source>
+        <source file="3/selected/1354438.java" startline="768" endline="789">
+    public synchronized void contactUpdated(Person original, Person updated) {
+        if (contactUpdated) return;
+        phoneBookRequest.operation = ClientDataRequest.Operation.UPDATE;
+        phoneBookRequest.original = original;
+        phoneBookRequest.updated = updated;
+        try {
+            SealedObject sealedPhoneBookRequest = new SealedObject(phoneBookRequest, outCipher);
+            objectOut.writeObject(sealedPhoneBookRequest);
+            objectOut.flush();
+            objectOut.reset();
+        } catch (IOException e) {
+            Debug.error("Error writing updated contact to server");
+            Debug.error(e.toString());
+            e.printStackTrace();
+        } catch (IllegalBlockSizeException e) {
+            Debug.error("Illegal block size exception!");
+            Debug.error(e.toString());
+            e.printStackTrace();
+        }
+        phoneBookRequest.original = null;
+        phoneBookRequest.updated = null;
+    }
+</source>
+    </clone>
+</clones>

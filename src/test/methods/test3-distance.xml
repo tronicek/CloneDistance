@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="8" distance="2">
+        <source file="27/default/68876.java" startline="110" endline="117">
+static {
+        try {
+            formats = Class.forName("OPT_InstructionFormatTables");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+    }
+</source>
+        <source file="27/default/90854.java" startline="107" endline="114">
+static {
+        try {
+            Class.forName("OPT_InstructionFormatTables");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            System.exit(-1);
+        }
+    }
+</source>
+    </clone>
+</clones>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="3" distance="1">
+        <source file="A.java" startline="116" endline="118">
+    void m(int x) {
+        if (x &gt; 0) {
+            int a = 11;
+            System.out.println(a);
+        } else {
+            int a = 12;
+            System.out.println(a);
+        }
+    }
+</source>
+        <source file="B.java" startline="781" endline="783">
+    void m2(int x) {
+        if (x &lt;= 0) {
+            int a = 11;
+            System.out.println(a);
+        } else {
+            int b = 12;
+            System.out.println(b);
+        }
+    }
+</source>
+    </clone>
+</clones>

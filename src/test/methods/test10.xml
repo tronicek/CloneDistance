@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="20" similarity="98">
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="672" endline="691">
+static int intUnaryOperation(Integer I, int kind)
+    {
+        int operand = I.intValue();
+
+        switch(kind)
+        {
+            case PLUS:
+                return operand;
+            case MINUS:
+                return -operand;
+            case TILDE:
+                return ~operand;
+            case INCR:
+                return operand - 1;
+            case DECR:
+                return operand + 1;
+            default:
+                throw new InterpreterError("bad integer unaryOperation");
+        }
+    }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="693" endline="712">
+static long longUnaryOperation(Long L, int kind)
+    {
+        long operand = L.longValue();
+
+        switch(kind)
+        {
+            case PLUS:
+                return operand;
+            case MINUS:
+                return -operand;
+            case TILDE:
+                return ~operand;
+            case INCR:
+                return operand + 1;
+            case DECR:
+                return operand - 1;
+            default:
+                throw new InterpreterError("bad long unaryOperation");
+        }
+    }
+</source>
+    </clone>
+</clones>
