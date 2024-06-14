@@ -1,8 +1,8 @@
 LICENSE FOR RESEARCH AND EVALUATION
 
-CloneChecker
+CloneDistance
 
-Copyright © 2021 Zdenek Tronicek. All rights reserved.
+Copyright © 2024 Zdenek Tronicek. All rights reserved.
 
 The licensor grants to the user of this software the following rights, irrevocably:
 
